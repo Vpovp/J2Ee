@@ -1,0 +1,17 @@
+package com.jspiders.springmvc.dao;
+
+import java.util.List;
+
+import com.jspiders.springmvc.dto.StudentDTO;
+
+public interface StudentDAOInterface {
+	void addStudent(String name,String username,String email,String password);
+	StudentDTO login(String username,String password);
+	List<StudentDTO> viewAllStudents();
+	StudentDTO removeStudent(int id);
+	StudentDTO updateStudent(int id, String name, 
+			String email, String userName, String password);
+	
+	StudentDTO searchStudent(int id);
+
+}
